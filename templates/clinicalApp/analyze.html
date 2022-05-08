@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyze</title>
+</head>
+<body>
+    <h1>Analyzing the data:</h1>
+    <table border="2">
+        <thead>
+            <th>Component Name</th>
+            <th>Component Value</th>
+            <th> registered date and time</th>
+        </thead>
+        {% for entry in data %}
+        <tr>
+            <td>{{ entry.componentName }}</td>
+            <td>{{ entry.componentValue }}</td>
+            <td>{{ entry.registeredDate }}</td>
+        </tr>
+        {% endfor %}
+    </table >
+    <a href="/">home</a>
+</body>
+</html>
